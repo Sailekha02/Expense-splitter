@@ -1,4 +1,4 @@
-import { ExpenseProvider } from "./context/ExpenseContext";
+import { ExpenseProvider } from "./context/ExpenseContext.jsx";
 import AppRoutes from "./routes";
 
 function App() {
