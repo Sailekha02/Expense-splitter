@@ -1,0 +1,53 @@
+ 
+.add-expense-container {
+    width: 90%;           
+  max-width: 500px;     
+  min-width: 300px;     
+  padding: 30px;        
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    
+    
+}
+
+.add-expense-form input {
+    display: block;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-expense-form button {
+    padding: 10px 15px;
+    display: block;
+    margin: 10px auto 0 auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-expense-container h2 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.add-expense-form button:hover {
+    background-color: #0056b3;
+}
+
+.add-expense-page {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  background-image: url('../assets/Money.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+

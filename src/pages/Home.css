@@ -1,0 +1,69 @@
+.home-container {
+  padding: 40px;
+  text-align: center;
+  /* Background image */
+  background-image: url('../assets/Money.jpg'); 
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  min-height: 100vh;            
+  color: white;                 
+}
+
+.hero {
+  background-color: #f5f5f5;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  color: #4CAF50;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-btn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 25px;
+  background-color: #4CAF50; 
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #45a049;
+}
+
+.home-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.home-summary h3 {
+  margin-bottom: 10px;
+}
+
+.home-summary p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}

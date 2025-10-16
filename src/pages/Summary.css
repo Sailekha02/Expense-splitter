@@ -1,0 +1,102 @@
+.summary-container {
+  width: 90%;           
+  max-width: 500px;     
+  min-width: 300px;     
+  padding: 30px;        
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.summary-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.summary-card {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.expense-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #e4e1e1;
+}
+
+.expense-name {
+  flex: 2;
+}
+
+.expense-amount {
+  flex: 1;
+  text-align: right;
+}
+
+.expense-payer {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+}
+
+.balances-section {
+  margin-top: 20px;
+}
+
+.balances-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.balance-item {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.settlements-section {
+  margin-top: 20px;
+}
+
+.settlements-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settlements-section li {
+  background-color: #0db31b;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.summary-page {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  background-image: url('../assets/Money.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
