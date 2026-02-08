@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import AddExpense from "./pages/AddExpense";
@@ -21,9 +23,11 @@ export default function AppRoutes() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/add-expense" element={<AddExpense />} />
-          <Route path="/summary" element={<Summary />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/add-expense" element={<ProtectedRoute><AddExpense /></ProtectedRoute>} />
+          <Route path="/summary" element={<ProtectedRoute><Summary /></ProtectedRoute>} />
         </Routes>
       </Layout>
     </Router>
