@@ -1,0 +1,55 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #4CAF50, #2e7d32);
+}
+
+.landing-card {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+.landing-card h1 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.landing-card p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-btn {
+  flex: 1;
+  margin: 0 8px;
+  padding: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.login-btn {
+  background-color: #4CAF50;
+}
+
+.register-btn {
+  background-color: #388e3c;
+}
+
+.landing-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}

@@ -14,7 +14,7 @@ export default function Header() {
     <nav className="header">
       {isLoggedIn ? (
         <>
-          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/home" className="nav-link">Home</Link>
           <Link to="/add-expense" className="nav-link">Add Expense</Link>
           <Link to="/summary" className="nav-link">Summary</Link>
           <button className="logout-btn" onClick={handleLogout}>Logout</button>

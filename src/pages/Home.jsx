@@ -17,6 +17,7 @@ export default function Home() {
       <div className="home-buttons">
         <Link to="/add-expense" className="home-btn">Add Expense</Link>
         <Link to="/summary" className="home-btn">View Summary</Link>
+        <Link to="/expenses" className="home-btn">View All Expenses</Link>
       </div>
 
       {expenses.length > 0 && (

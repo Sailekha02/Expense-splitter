@@ -1,3 +1,4 @@
+import "./Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -13,20 +14,42 @@ export default function Login() {
 
     if (user && user.email === email && user.password === password) {
       localStorage.setItem("isLoggedIn", "true");
-      navigate("/");
+      navigate("/home");
     } else {
       alert("Invalid credentials");
     }
   };
 
   return (
+  <div className="auth-page">
     <div className="auth-container">
       <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+
+      <form onSubmit={handleLogin} className="auth-form">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
         <button type="submit">Login</button>
       </form>
+
+      <p className="auth-link">
+        Don't have an account? <a href="/register">Register</a>
+      </p>
     </div>
-  );
+  </div>
+);
+
 }

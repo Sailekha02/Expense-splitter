@@ -22,7 +22,7 @@ export default function AddExpense() {
       return;
     }
 
-    setExpenses([...expenses, { name, amount: parseFloat(amount), paidBy }]);
+    setExpenses([...expenses, { name, amount: parseFloat(amount), paidBy, date: new Date().toLocaleDateString() }]);
 
     if (!participants.includes(paidBy)) {
       setParticipants([...participants, paidBy]);
