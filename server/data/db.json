@@ -1,0 +1,162 @@
+{
+  "users": [
+    {
+      "id": "eb12d0bd-fde8-46bf-9bd5-2a1b25be7b65",
+      "name": "Sailekha Matheswaran",
+      "email": "sailekha.mathes@gmail.com",
+      "passwordHash": "$2a$10$1TiNCDcTQ1df8WzFREssnOWqf.FqeaDUFWnLPt1jgQbr7odwpAOLm",
+      "currency": "INR",
+      "createdAt": "2026-10-03T17:20:43.744Z"
+    },
+    {
+      "id": "d9d3955b-eb07-40fc-ab5b-d8f4981c1052",
+      "name": "Bhuvana Matheswaran",
+      "email": "bhuvana.matheswaran@gmail.com",
+      "passwordHash": "$2a$10$v6uUUzrsdylzIP5X5YFST.53au7PCimROz0GRfdbYdlyaH9JsfVqK",
+      "currency": "INR",
+      "createdAt": "2026-10-03T17:25:00.371Z"
+    }
+  ],
+  "groups": [
+    {
+      "id": "851d8b03-fedc-4f4a-9326-c8b292095fc3",
+      "name": "Chennai trip",
+      "description": "",
+      "ownerId": "eb12d0bd-fde8-46bf-9bd5-2a1b25be7b65",
+      "createdAt": "2026-10-03T17:21:34.170Z",
+      "members": [
+        {
+          "id": "d5bb952b-eb16-4a9b-b1f7-bcb63764df08",
+          "name": "Sailekha Matheswaran",
+          "userId": "eb12d0bd-fde8-46bf-9bd5-2a1b25be7b65"
+        },
+        {
+          "id": "124fb2ba-5e58-4d12-a8f2-d76aee153b36",
+          "name": "Santhosh JP"
+        }
+      ]
+    },
+    {
+      "id": "5a987740-a854-48d8-938b-b62417715e6b",
+      "name": "Coorg trip",
+      "description": "",
+      "ownerId": "d9d3955b-eb07-40fc-ab5b-d8f4981c1052",
+      "createdAt": "2026-10-03T17:25:34.814Z",
+      "members": [
+        {
+          "id": "411891cf-13ac-416b-8940-c7578bf47e1a",
+          "name": "Bhuvana Matheswaran",
+          "userId": "d9d3955b-eb07-40fc-ab5b-d8f4981c1052"
+        },
+        {
+          "id": "7440223e-2765-46f9-97c3-fcccb56efb34",
+          "name": "Hrishikesh Sir"
+        },
+        {
+          "id": "ce58fb58-753b-42e5-815e-7b87767cac2c",
+          "name": "Nimish"
+        },
+        {
+          "id": "69f1e247-37a6-4191-a3a3-415e584cd528",
+          "name": "Sailekha"
+        }
+      ]
+    }
+  ],
+  "expenses": [
+    {
+      "id": "986e6163-39f0-47f7-b6f0-c0001edaccca",
+      "groupId": "851d8b03-fedc-4f4a-9326-c8b292095fc3",
+      "createdAt": "2026-10-03T17:22:24.630Z",
+      "description": "breakfast at Sangeetha",
+      "amount": 500,
+      "category": "food",
+      "date": "2026-10-03",
+      "paidBy": "d5bb952b-eb16-4a9b-b1f7-bcb63764df08",
+      "splitType": "equal",
+      "splits": [
+        {
+          "memberId": "d5bb952b-eb16-4a9b-b1f7-bcb63764df08",
+          "amount": 250
+        },
+        {
+          "memberId": "124fb2ba-5e58-4d12-a8f2-d76aee153b36",
+          "amount": 250
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "6d414c97-c930-447d-98a8-8d9ddd71048e",
+      "groupId": "5a987740-a854-48d8-938b-b62417715e6b",
+      "createdAt": "2026-10-03T17:26:26.950Z",
+      "description": "Hotel Stay",
+      "amount": 2500,
+      "category": "other",
+      "date": "2026-10-03",
+      "paidBy": "7440223e-2765-46f9-97c3-fcccb56efb34",
+      "splitType": "equal",
+      "splits": [
+        {
+          "memberId": "411891cf-13ac-416b-8940-c7578bf47e1a",
+          "amount": 625
+        },
+        {
+          "memberId": "7440223e-2765-46f9-97c3-fcccb56efb34",
+          "amount": 625
+        },
+        {
+          "memberId": "ce58fb58-753b-42e5-815e-7b87767cac2c",
+          "amount": 625
+        },
+        {
+          "memberId": "69f1e247-37a6-4191-a3a3-415e584cd528",
+          "amount": 625
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "140a9ddd-107b-42d8-84ea-c231a2a338ab",
+      "groupId": "5a987740-a854-48d8-938b-b62417715e6b",
+      "createdAt": "2026-10-03T17:26:51.991Z",
+      "description": "Lunch",
+      "amount": 1560,
+      "category": "food",
+      "date": "2026-10-03",
+      "paidBy": "411891cf-13ac-416b-8940-c7578bf47e1a",
+      "splitType": "equal",
+      "splits": [
+        {
+          "memberId": "411891cf-13ac-416b-8940-c7578bf47e1a",
+          "amount": 390
+        },
+        {
+          "memberId": "7440223e-2765-46f9-97c3-fcccb56efb34",
+          "amount": 390
+        },
+        {
+          "memberId": "ce58fb58-753b-42e5-815e-7b87767cac2c",
+          "amount": 390
+        },
+        {
+          "memberId": "69f1e247-37a6-4191-a3a3-415e584cd528",
+          "amount": 390
+        }
+      ],
+      "notes": ""
+    }
+  ],
+  "settlements": [
+    {
+      "id": "e7baf81f-2329-4a42-b4f2-94a369db4c7f",
+      "groupId": "5a987740-a854-48d8-938b-b62417715e6b",
+      "from": "69f1e247-37a6-4191-a3a3-415e584cd528",
+      "to": "411891cf-13ac-416b-8940-c7578bf47e1a",
+      "amount": 500,
+      "date": "2026-10-03",
+      "note": "UPI",
+      "createdAt": "2026-10-03T17:27:28.277Z"
+    }
+  ]
+}

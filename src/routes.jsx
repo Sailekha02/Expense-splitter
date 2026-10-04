@@ -1,74 +1,63 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Landing from "./pages/Landing";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import AddExpense from "./pages/AddExpense";
-import Summary from "./pages/Summary";
-import AllExpense from "./pages/AllExpense";
-import ProtectedRoute from "./components/ProtectedRoute";
+import { BrowserRouter, Routes, Route, Navigate, Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Navbar from "./components/Navbar.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Landing from "./pages/Landing.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import Home from "./pages/Home.jsx";
+import Groups from "./pages/Groups.jsx";
+import GroupDetail from "./pages/GroupDetail.jsx";
+import AddExpense from "./pages/AddExpense.jsx";
+import Expenses from "./pages/Expenses.jsx";
+import Analytics from "./pages/Analytics.jsx";
+import Profile from "./pages/Profile.jsx";
 
-function Layout({ children }) {
-  const location = useLocation();
-  const hideHeaderOnAuth =
-    location.pathname === "/" ||
-    location.pathname === "/login" ||
-    location.pathname === "/register";
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function AppLayout() {
   return (
-    <>
-      {!hideHeaderOnAuth && <Header />}
-      {children}
-    </>
+    <ProtectedRoute>
+      <Navbar />
+      <main className="container">
+        <Outlet />
+      </main>
+    </ProtectedRoute>
   );
 }
 
 export default function AppRoutes() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          {/* Public pages */}
-          <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
-          {/* Protected pages */}
-          <Route
-            path="/home"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/add-expense"
-            element={
-              <ProtectedRoute>
-                <AddExpense />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/summary"
-            element={
-              <ProtectedRoute>
-                <Summary />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/expenses"
-            element={
-              <ProtectedRoute>
-                <AllExpense />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </Layout>
-    </Router>
+        <Route element={<AppLayout />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/groups" element={<Groups />} />
+          <Route path="/groups/:id" element={<GroupDetail />} />
+          <Route path="/add-expense" element={<AddExpense />} />
+          <Route path="/expenses" element={<Expenses />} />
+          <Route path="/expenses/:id/edit" element={<AddExpense />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+
+        {/* old route from the first version of the app */}
+        <Route path="/summary" element={<Navigate to="/analytics" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
